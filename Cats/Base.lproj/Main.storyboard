@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7rc-0T-odN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cats CollectionVC-->
+        <scene sceneID="YUF-Tr-zn9">
+            <objects>
+                <collectionViewController id="7rc-0T-odN" customClass="CatsCollectionVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gS3-ha-wan">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O0A-TW-YPm">
+                            <size key="itemSize" width="375" height="308"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="catsCell" id="gvc-LX-yFB" customClass="CatsCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="308"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ot-zt-h7s">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="258"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cp-Oe-QjJ">
+                                            <rect key="frame" x="20" y="267" width="335" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="dqU-IX-dyL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="3cp-Oe-QjJ" secondAttribute="trailing" constant="12" id="8lg-Y3-UWK"/>
+                                    <constraint firstItem="3cp-Oe-QjJ" firstAttribute="top" secondItem="4ot-zt-h7s" secondAttribute="bottom" constant="9" id="PEV-k4-iLj"/>
+                                    <constraint firstItem="3cp-Oe-QjJ" firstAttribute="leading" secondItem="gvc-LX-yFB" secondAttribute="leadingMargin" constant="12" id="TD1-Ag-h3H"/>
+                                    <constraint firstItem="4ot-zt-h7s" firstAttribute="centerX" secondItem="gvc-LX-yFB" secondAttribute="centerX" id="Yqx-jq-nWr"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ot-zt-h7s" secondAttribute="trailing" id="c5e-88-ooG"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="3cp-Oe-QjJ" secondAttribute="bottom" constant="12" id="dY0-kI-aGq"/>
+                                    <constraint firstItem="4ot-zt-h7s" firstAttribute="top" secondItem="gvc-LX-yFB" secondAttribute="top" id="eot-WY-4FW"/>
+                                    <constraint firstItem="3cp-Oe-QjJ" firstAttribute="top" secondItem="4ot-zt-h7s" secondAttribute="bottom" constant="9" id="qqW-Ew-3jS"/>
+                                    <constraint firstItem="4ot-zt-h7s" firstAttribute="leading" secondItem="gvc-LX-yFB" secondAttribute="leading" id="uvr-Am-YXq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="catImageView" destination="4ot-zt-h7s" id="xCp-HI-QVE"/>
+                                    <outlet property="titleLabel" destination="3cp-Oe-QjJ" id="k3V-ZA-oNv"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7rc-0T-odN" id="RPH-F5-RVM"/>
+                            <outlet property="delegate" destination="7rc-0T-odN" id="fqs-rM-40d"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d12-un-YlH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="218.1409295352324"/>
+        </scene>
+    </scenes>
+</document>
